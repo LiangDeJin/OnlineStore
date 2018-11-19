@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" default-autowire="byName"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<!-- 扫描外部文件 -->
+	<context:annotation-config />
+	<context:property-placeholder location="classpath:db.properties" />
+
+	<!-- 配置数据源 跟数据库打交道 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<!-- 配置参数 -->
+		<property name="jdbcUrl">
+			<value>${db.url}</value>
+		</property>
+		<property name="driverClass">
+			<value>${db.jdbcDriver}</value>
+		</property>
+		<property name="user">
+			<value>${db.username}</value>
+		</property>
+		<property name="password">
+			<value>${db.password}</value>
+		</property>
+	</bean>
+
+	<!-- 配置与hibernate的连接 ref是引入其他bean -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<!-- 引入数据源 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 引入hibernate的配置文件 -->
+		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+		<!-- 引进实体类 -->
+		<property name="mappingLocations"
+			value="classpath:com/graduationdesign/entity/*.hbm.xml"></property>
+	</bean>
+
+	<!-- 声明式事务 -->
+	<!-- 1.配置hibernate的事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 2.配置事务属性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="*" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 配置事务切入点，关联起来 -->
+	<aop:config>
+		<aop:pointcut expression="execution(* com.graduationdesign.service.impl.*.*(..))"
+			id="txPointcut" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
+	</aop:config>
+
+	<!-- 登录的注入 -->
+
+	<!-- 将sessionFactory注入 到com.graduationdesign.dao.impl.loginDaoImpl -->
+	<bean id="loginDao" class="com.graduationdesign.dao.impl.loginDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 将 loginDao注入到loginService· -->
+	<bean id="loginService" class="com.graduationdesign.service.impl.LoginServiceImpl">
+		<property name="loginDao" ref="loginDao"></property>
+	</bean>
+
+	<!-- 将 loginService注入到loginAction· -->
+	<bean id="loginAction" class="com.graduationdesign.action.LoginAction"
+		scope="prototype">
+		<property name="loginService" ref="loginService"></property>
+	</bean>
+
+
+	<!-- 注册的注入 -->
+	<!-- 将sessionFactory注入 到com.graduationdesign.dao.impl.IRegisterDaoImpl -->	
+	<bean id="registerDao" class="com.graduationdesign.dao.impl.RegisterDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 将 registerDao注入到loginService· -->
+	<bean id="registerService" class="com.graduationdesign.service.impl.RegisterServiceImpl">
+		<property name="registerDao" ref="registerDao"></property>
+	</bean>
+	
+	<!-- 将loginService注入到registerAction -->
+	<bean id="registerAction" class="com.graduationdesign.action.RegisterAction">
+		<property name="registerService" ref="registerService"></property>
+	</bean>
+
+
+	<!-- 查询的注入 -->
+	
+	<bean id="selectListClothesDao" class="com.graduationdesign.dao.impl.SelectListClothesDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="selectListClothesService" class="com.graduationdesign.service.impl.SelectListClothesImpl">
+		<property name="selectListClothesDao" ref="selectListClothesDao"></property>
+	</bean>
+	
+	<bean id="selectListAction" class="com.graduationdesign.action.SelectListAction">
+		<property name="selectListClothesService" ref="selectListClothesService"></property>
+	</bean>
+	 
+	 
+	 <!-- 详细页面的注入 -->
+	 <bean id="detaiDao" class="com.graduationdesign.dao.impl.DetailDaoImpl">
+	 	<property name="sessionfactory" ref="sessionFactory"></property>
+	 </bean>
+	 
+	 <bean id="detailService" class="com.graduationdesign.service.impl.DetailServiceImpl">
+	 	<property name="detailDao" ref="detaiDao"></property>
+	 </bean>
+	 	 
+	 <bean id="detailAction" class="com.graduationdesign.action.DetailAction">
+	 	<property name="detailService" ref="detailService"></property>
+	 </bean>
+	 
+	 <!-- 我的购物车的注入 -->
+	 
+	 <bean id="myCarDao" class="com.graduationdesign.dao.impl.MyCarDaoImpl">
+	 	<property name="sessionFactory" ref="sessionFactory"></property>
+	 </bean>
+	 
+	 <bean id="myCarService" class="com.graduationdesign.service.impl.MyCarServiceImpl">
+	 	<property name="myCarDao" ref="myCarDao"></property>
+	 </bean>
+	 
+	 <bean id="myCarAction" class="com.graduationdesign.action.myCarAction">
+	 	<property name="myCarService" ref="myCarService"></property>
+	 </bean>
+	 
+	 <!-- 填写地址的注入 （填写收货信息和订单一览表） -->
+	 <bean id="sortOutDao" class="com.graduationdesign.dao.impl.SortOutDaoImpl">
+	 	<property name="sessionFactory" ref="sessionFactory"></property>
+	 </bean>
+	 <bean id="sortOutService" class="com.graduationdesign.service.impl.SortOutServiceImpl">
+	 	<property name="sortOutDao" ref="sortOutDao"></property>
+	 </bean>
+	 <bean id ="sortOutAction" class="com.graduationdesign.action.SortOutAction">
+	 	<property name="sortOutService" ref="sortOutService"></property>
+	 </bean>
+	 
+	 
+	 <!-- 填写地址(下单)的注入 -->
+	 <bean id="writeAddressdao" class="com.graduationdesign.dao.impl.WriteAddressDaoImpl">
+	 	<property name="sessionFactory" ref="sessionFactory"></property>
+	 </bean>
+	 
+	 <bean id="writeAddressService" class="com.graduationdesign.service.impl.WriteAddressServiceImpl">
+	 	<property name="writeAddressdao" ref="writeAddressdao"></property>
+	 </bean>
+	 
+	 <bean id = "writeAddressAction" class="com.graduationdesign.action.WriteAddressAction">
+	 	<property name="writeAddressService" ref="writeAddressService"></property>
+	 </bean>
+	 
+	 
+	 <!-- 用户信息的注入 -->
+	 <!-- 我的个人信息地址的注入 -->
+	 <bean id="resourceDao" class="com.graduationdesign.dao.impl.ResourceDaoImpl">
+	 	<property name="sessionFactory" ref="sessionFactory"></property>
+	 </bean>
+	 
+	 <bean id="resourceService" class="com.graduationdesign.service.impl.ResourceServiceImpl">
+	 	<property name="resourceDao" ref="resourceDao"></property>
+	 </bean>
+	 
+	 <bean id="ResourceAction" class="com.graduationdesign.action.ResourceAciton">
+		<property name="resourceService" ref="resourceService"></property>	
+		<property name="sortOutService" ref="sortOutService"></property>
+	 </bean>
+	 
+	 <!-- 我的订单的注入 -->
+	 <bean id="myOrderDao" class="com.graduationdesign.dao.impl.MyOrderDaoImpl">
+	 	<property name="sessionFactory" ref="sessionFactory"></property>
+	 </bean>
+	 <bean id="myOrderService" class="com.graduationdesign.service.impl.MyOrderServiceImpl">
+	 	<property name="myOrderDao" ref="myOrderDao"></property>
+	 </bean>
+	 <bean id="MyOrderAction" class="com.graduationdesign.action.MyOrderAction">
+	 	<property name="myOrderService" ref="myOrderService"></property>
+	 </bean>
+	 
+	 <!-- 地址管理的注入（增加地址） -->
+	 <bean id="addDDao" class="com.graduationdesign.dao.impl.AddDDaoImpl">
+	 	<property name="sessionFactory" ref="sessionFactory"></property>
+	 </bean>
+	 <bean id="addDService" class="com.graduationdesign.service.impl.AddDServiceImpl">
+	 	<property name="addDDao" ref="addDDao"></property>
+	 </bean>
+	 <bean id="addDAction" class="com.graduationdesign.action.AddDAction">
+	 	<property name="addDService" ref="addDService"></property>
+	 </bean>
+	 
+	 
+	 <!-- 邮箱通过邮箱的链接 -->
+	 <bean id="findpswAction" class="com.graduationdesign.action.FindpswAction">
+	 	<property name="loginService" ref="loginService"></property>
+	 </bean>
+	 
+	  <!-- 修改密码 -->
+	 <bean id="changepswAction" class="com.graduationdesign.action.ChangepswAction">
+	 </bean>
+	 
+	 <!-- 物流信息 -->
+	 <bean id="allLogisticsDao" class="com.graduationdesign.dao.impl.AllLogisticsDaoImpl">
+	 	<property name="sessionfactory" ref="sessionFactory"></property>
+	 </bean>
+	 
+	 <bean id="allLogisticsService" class="com.graduationdesign.service.impl.AllLogisticsServiceImpl">
+	 	<property name="allLogisticsDao" ref="allLogisticsDao"></property>
+	 </bean>
+	 
+	  <bean id="allLogisticsAction" class="com.graduationdesign.action.AllLogisticsAction">
+	  	<property name="allLogisticsService" ref="allLogisticsService"></property>
+	 </bean>
+	 
+	 <!-- 图片上传 -->
+	 <bean id="uploadAction" class="com.graduationdesign.action.UploadAction">
+	 	<property name="loginService" ref="loginService"></property>
+	 </bean>
+	 <!-- 多图上传 -->
+	 <bean id="UpMultipleAction" class="com.graduationdesign.action.UpMultipleAction">
+		<property name="myIMyOrderService" ref="myOrderService"></property>
+		<property name="detailService" ref="detailService"></property>	 
+	 </bean>
+	 
+	 <!-- ajax查询评论 -->
+	 <bean id="selectCommentsDao" class="com.graduationdesign.dao.impl.SelectCommentsDaoImpl">
+	 	<property name="sessionfactory" ref="sessionFactory"></property>
+	 </bean>
+	 
+	 <bean id="selectCommentsService" class="com.graduationdesign.service.impl.SelectCommentsServiceImpl">
+	 	<property name="selectCommentsDao" ref="selectCommentsDao"></property>
+	 </bean>
+	 
+	 <bean id="selectCommentsAction" class="com.graduationdesign.action.SelectCommentsAction">
+	 	<property name="selectCommentsService" ref="selectCommentsService"></property>
+	 </bean>
+</beans>

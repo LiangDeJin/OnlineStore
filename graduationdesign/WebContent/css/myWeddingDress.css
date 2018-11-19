@@ -1,0 +1,274 @@
+@charset "utf-8";
+iframe{
+	width: 100%;
+	height: 880px;
+	border: 0;
+}
+/*-------------我的商城个人页面*/
+.myWeddingDress{
+	/*border: 1px solid #A0A0A0;*/
+	width: 95%;
+}
+/*------------------左边导航*/
+.aside{
+	float: left;
+	width: 18%;
+}
+.Title_baoguo{
+	border: 1px solid #DDDDDD;
+	box-shadow: 2px 2px 8px #666666;
+	width: 90%;
+	margin-top: 10px;
+	font-size: 14px;
+	color: #656565;
+}
+.Title_baoguo ul{
+	padding: 5px;
+	text-align: center;
+}
+.Title_baoguo ul li{
+	padding: 5px;
+}
+.aside_title{
+	position: relative;
+
+}
+.aside_title img{
+	position: absolute;
+	width:15px;
+	height: 15px;
+	top: 26%;
+	left:22%;
+}
+.aside_title a{
+	color: #CD426C;
+	font-size: 16px;
+}
+/*-------------------中间内容*/
+.myWeddingDress_content{
+	float: left;
+	margin-top: 10px;
+	width: 80%;
+}
+.myWeddingDress_cont{
+	/*border: 1px solid #000;*/
+	box-shadow: 2px 2px 5px #666666;
+	width: 98%;
+	font-size: 14px;
+	color: #656565;
+}
+/*------------------------主要部分的导航包裹层*/
+.cont_nav{
+	/*border: 1px solid #DDDDDD;*/
+	position: relative;
+	width: 100%;
+	height: 80px;
+}
+/*---------------------------------头像*/
+.cont_nav .headimg{
+	/*border: 1px solid #DDDDDD;*/
+	position: absolute;
+	top: 10%;
+	left: 20px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	z-index: 2;
+}
+.cont_nav .headimg img{
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+}
+
+.cont_nav .cont{
+	position: absolute;
+	z-index: 1;
+	top: 25%;
+	width: 100%;
+	height:60px;
+	background-color: #E5E5E5;
+}
+.cont_nav .cont .cont_title{
+	position: absolute;
+	top: 35%;
+	left:12%;
+	font-size: 16px;
+	font-weight: bold;
+	color: #CD426C;
+	/*border: 1px solid #000;*/
+}
+
+/*-----------------------内容显示*/
+.neirong{
+	/*border: 1px solid #000;*/
+	box-shadow: 1px 1px 10px #666666;
+	margin-bottom: 10px;
+	width: 98%;
+	font-size: 14px;
+	color: #656565;
+}
+
+.neirong .neirong_nav{
+	/*border: 1px solid #000;*/
+	float: left;
+	width: 50%;
+	padding:15px;
+	display: table;
+}
+.neirong .neirong_nav ul{
+	display: table-row;
+}
+.neirong .neirong_nav ul li{
+	display: table-cell;
+	/*border: 1px solid #000;*/
+	padding: 3px;
+
+}
+.neirong .neirong_nav ul li span{
+	/*margin: 27%;*/
+	padding-left: 27px;
+	font-size: 16px;
+}
+.total{
+	color: #CD426C;
+	font-weight: bold;
+}
+/*--------------内容包裹*/
+.neirong_content{
+	border: 1px solid #E5E4E4;
+	clear: both;
+	width: 99.79%;
+}
+/*------------包裹头部*/
+.neirong_content_title{
+	width: 100%;
+	height: 50px;
+	background-color: #FAFAFA;
+	font-size: 12px;
+}
+/*-------------设置每项*/
+.date_img{
+	float: left;
+	margin-top: 2.1%;
+	padding-left: 15px;
+	width: 12%;
+	/*border: 1px solid #000000;*/
+}
+.num_detail{
+	float: left;
+	width: 22%;
+	margin-top: 2.1%;
+}
+.price_cont{
+	float: left;
+	width: 14%;
+	margin-top: 2.1%;
+}
+.twn{
+	position: relative;
+	float: left;
+	width: 12%;
+	margin-top: 2.1%;
+}
+/*----------------每一项的内容*/
+.neirong_cont{
+	border: 1px solid #E5E4E4;
+	clear: both;
+	width: 100%;
+	height: 105px;	
+}
+.10px{
+	margin-top: 10px;
+}
+.date_img img{
+	margin-top:-5px;
+	width: 80px;
+	height:80px;
+	/*border: 1px solid #000000;*/
+}
+.wen{
+	float: left;
+	width:170px;
+	height: 20px;
+	overflow: hidden;
+}
+.special{
+	color: #CD426C;
+}
+.specialevalu{
+	clear: left;
+	float: left;
+	color: #CD426C;
+}
+.sure{
+	position: absolute;
+	top: 10px;
+	text-align: center;
+	color: white;
+	background-color: #CD426C;
+	padding:8px;
+}
+.sure:hover{
+	color: white;
+}
+/*---------------------------------退换货*/
+.word{
+	text-align: center;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.word_cont{
+	text-align: center;
+	padding: 10px;
+	font-size: 14px;
+}
+
+/*--------------------增加评论*/
+.write{
+	z-index: 11;
+	padding: 5px;
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 900px;
+	height: 400px;
+	background-color: white;
+	position: absolute;
+	top: 25%;
+	left: 5%;	
+	display: none;
+}
+.give_img{
+	position: absolute;
+	left: 45%;
+	width: 100%;
+	top: 5px;
+}
+.commit_add{
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px;
+	background-color: #CD426C;
+	margin:0 10px;
+	color: white;
+	float: left;
+	width: 100px;
+	font-family: "微软雅黑";
+}
+.commit_add:hover{
+	color: white;
+}
+.comeback{
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px;
+	background-color: #656565;
+	margin-right: 20px;
+	color: white;
+	float: left;
+	width: 100px;
+}
+.comeback:hover{
+	color: white;
+}

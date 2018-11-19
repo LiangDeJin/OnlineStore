@@ -1,0 +1,100 @@
+@charset "utf-8";
+/*----------------------注册页面包裹*/
+.register_content{
+	/*background: url(../img/bigimg/201607201237.jpg);*/
+	position: relative;
+	/*width: 1200px;*/
+	width: 100%;
+	height: 500px;
+	/*border: 1px solid #999999;*/
+}
+.bg{
+	width: 100%;
+	height: 100%;
+}
+/*---------------------------背景模糊*/
+.blur {    
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);    
+}
+.register{
+	position: absolute;
+	border-radius: 4px;
+	height:400px;	
+	top: 50px;
+	right:130px;
+	background-color: #eee;
+	opacity: 0.9;
+}
+/*----------------------------注册标题*/
+.register_title{
+	color: #656565;
+	margin: 20px 0 10px 25px;
+	font-weight: bolder;
+	font-size: 14px;
+}
+/*-------------------------------------注册用户密码*/
+.pass-register{
+	position:relative;
+	margin: 20px;
+}
+.posi{
+	position: relative;
+}
+/*------------------------小图标签*/
+.pass-register .pass-password_user{
+	position: absolute;
+	height: 10px;
+	width: 17px;	
+	left: 11px;
+	padding-bottom: 10px;		
+}
+/*---------------------方框用户名密码*/
+.pass-register .password_user{
+	border:  1px solid   #e7e7e7;
+	border-radius: 2px;
+	background-color: white;
+	display: block;
+	padding: 7px 10px 7px 36px;
+	width: 228px;
+	height: 26px;
+	line-height: 26px;
+}
+.label_user{
+	top: 11px;
+	background: url(../img/icon/input_icon.png) 0 0px no-repeat;
+}
+.label_password{
+	top: 10px;
+	background: url(../img/icon/input_icon.png) -16px 0 no-repeat;
+}
+.label_password_again{
+	top: 10px;
+	background: url(../img/icon/again.jpg) no-repeat;
+}
+/*---------------------------------注册框*/
+.pass-register .p1{
+	text-align: center;
+	position: absolute;
+	border-radius:6px;
+	background-color:#CD426C;
+	width: 275px;
+	line-height: 40px;
+	height: 40px;
+}
+.pass-register .p1 .Submit{
+	cursor: pointer;
+	height: 41px;
+	font-size: 20px;
+	font-weight: bolder;
+	font-family: Microsoft YaHei,SimHei,Tahoma;
+	text-decoration: none;
+	color: white;
+}
+.suggetion{
+	position: absolute;
+	top: 260px;
+	right: 0;
+}

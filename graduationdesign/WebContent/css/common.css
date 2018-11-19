@@ -1,0 +1,481 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body {
+	font-family: STHeiti, Microsoft Yahei, "Helvetica Neue", Helvetica, Arial, sans-serif, MingLiu;
+}
+
+div {
+	margin: 0 auto;
+}
+.hr1 {
+	height: 1px;
+	clear: both;
+}
+.hr5 {
+	height: 5px;
+	clear: both;
+}
+
+.hr18 {
+	height: 18px;
+	clear: both;
+}
+
+.hr10 {
+	height: 10px;
+	clear: both;
+}
+
+.hr20 {
+	height: 20px;
+	clear: both;
+}
+
+.hr30 {
+	height: 30px;
+	clear: both;
+}
+
+.hr40 {
+	height: 40px;
+	clear: both;
+}
+
+.hr150 {
+	height: 150px;
+	clear: both;
+}
+
+a:hover {
+	color: #CD426C;
+}
+
+
+/*---------//随着滚动条滚动的div*/
+
+.rollingdiv {
+	background-color: #656565;
+	opacity: 0.9;
+	border-radius: 5px;
+	/*box-shadow: 1px 1px 5px #DDDDDD;*/
+	width: 42px;
+	position: absolute;
+	top: 200px;
+	right: 5px;
+	text-align: center;
+	z-index: 999;
+
+}
+
+
+/*---------每个小图标的包裹*/
+
+.rollingdiv li {
+	position: relative;
+	padding: 6px 0;
+	line-height: 40px;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+
+.rollingdiv li:hover {
+	background-color: #CD426C;
+	border-radius: 5px;
+}
+/*-------特别小的图标的位置偏移*/
+
+.rollingdiv li .min {
+	margin-top: 6px;
+}
+
+.rollingdiv li>a>img {
+	line-height: 35px;
+	max-width: 35px;
+	max-height: 35px;
+}
+
+.rollingdiv li div {
+	position: absolute;
+	right: 45px;
+	top: 0;
+	width: 102px;
+	height: 102px;
+	border-radius: 5px;
+}
+.rollingdiv li div{
+	display: none;
+}
+.rollingdiv li div .call{
+	width: 102px;
+	height: 102px;
+	border-radius: 5px;
+}
+
+/*------------------------------------------*/
+
+
+/*----header------*/
+
+header {
+	width: 95%;
+	height: 100px;
+	margin: 0 auto;
+}
+
+
+/*头部左边的位置logo*/
+
+.leftArea {
+	margin-top: 5px;
+	float: left;
+	width: 415px;
+	height: 95%;
+}
+
+.leftArea .logo {
+	margin-top: 10px;
+}
+
+.leftArea .logo .bottom {
+	margin-top: 3px;
+	height: 60px;
+	position: absolute;
+	left: 80px;
+	z-index: 998;
+}
+
+.leftArea .logo .top {
+	position: absolute;
+	z-index: 999;
+}
+
+
+/*.centerArea{
+	margin-top:5px;
+	float:left;
+	width:35%;
+	height:95%
+	}*/
+
+
+/*头部右边的搜索和登录注册等*/
+
+.rightArea {
+	margin-top: 5px;
+	float: right;
+	width: 30%;
+	height: 95% border: 1px solid black;
+}
+
+.rightArea .login_Register {
+	position: absolute;
+	right: 50px;
+	top: 10px
+}
+
+.rightArea .login_Register a {
+	line-height: 27px;
+	font-size: 12px;
+	padding-left: 5px;
+	display: inline-block;
+	text-decoration: none;
+	color: #666;
+}
+
+.rightArea .login_Register a:hover {
+	color: #CD426C;
+}
+
+.rightArea .search {
+	position: absolute;
+	height: 30px;
+	width: 200px;
+	border: 1px solid #000;
+	right: 50px;
+	top: 40px;
+}
+
+.rightArea .search input.search_k {
+	height: 30px;
+	line-height: 30px;
+	width: 160px;
+	border: none;
+	float: left;
+	margin-left: 5px;
+}
+
+.rightArea .search input.search_keyword {
+	height: 30px;
+	width: 30px;
+	float: left;
+	margin-left: 5px;
+	cursor: pointer;
+	background: url(../img/icon/search_button.png) center center no-repeat;
+}
+
+
+/*------------------------轮番图包含*/
+
+.img_content {
+	width: 100%;
+	height: 768px;
+}
+
+
+/*---- nav ------*/
+
+
+/*整个导航栏*/
+
+nav {
+	width: 100%;
+	height: 40px;
+	background-color: #eee;
+}
+
+
+/*-----导航--------------*/
+
+.nav_list {
+	width: 70%;
+	display: table;
+	position: relative;
+	text-align: center;
+}
+
+.nav_list ul {
+	display: table-row;
+}
+
+.nav_list ul li {
+	display: table-cell;
+	border-right: 1px solid silver;
+}
+
+.nav_list ul .leftLi {
+	border-left: 1px solid silver;
+}
+
+.nav_list ul li a {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 40px;
+	z-index: 8;
+	position: relative;
+	text-decoration: none;
+	color: black;
+}
+
+.nav_list ul li a:hover {
+	text-decoration: none;
+	color: ghostwhite;
+}
+
+
+/* 调用jQuery的插件   美化导航栏移动 */
+
+.nav_list ul li.back {
+	height: 40px;
+	position: absolute;
+	background-color: hsla(0, 0%, 70%, 0.8);
+	z-index: 2;
+	/*-ms代表IE浏览器私有属性*/
+	top: -moz-calc(0px);
+	/*Firefox */
+	top: -webkit-calc(0px);
+	/*Chrome ,Safari*/
+	top: calc(0px);
+}
+
+
+/*----container------*/
+
+
+/*包裹模块*/
+
+.container {
+	width: 100%;
+	overflow: hidden;
+}
+
+
+/*------图片展示-----------*/
+
+
+/*首页中的中间页面图片展示*/
+
+.Typography {
+	/*width:1200px;*/
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+/*标题图片位置 使其之中*/
+
+.Typography .Title_1 {
+	margin: 0 0 20px 410px;
+	z-index: 2;
+	height: 100px;
+}
+
+.Typography .Title_2 {
+	margin: 20px 0 20px 430px;
+	z-index: 2;
+	height: 100px;
+}
+
+.Typography .Title_3 {
+	margin: 20px 0 20px 450px;
+	z-index: 2;
+	height: 100px;
+}
+
+
+/*首页界面 li */
+
+.imageTypography li {
+	background-color: #000;
+	line-height: 1200px;
+	float: left;
+	margin: 5px;
+	/*width:590px;*/
+	width: 48%;
+	height: 600px;
+	overflow: hidden;
+}
+
+.imageTypography li img {
+	width: 100%;
+	height: 100%;
+}
+
+
+/*----图片遮帘-------*/
+
+.imageTypography:hover {
+	background-color: #666;
+}
+
+.imageTypography:hover li a img {
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+.imageTypography li a:hover img {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+
+/*.imageTypography li img{
+	display:block;
+	cursor:pointer;
+	transition:all 5s;	
+	}
+.imageTypography li img:hover{
+	transform: scale(1.08);	
+	}*/
+
+
+/*缓慢放大图片*/
+
+.imgTypography li {
+	line-height: 1200px;
+	float: left;
+	margin: 5px;
+	/*width:390px;*/
+	width: 32%;
+	height: 450px;
+	overflow: hidden;
+	/**/
+}
+
+.imgTypography li img {
+	display: block;
+	/*width:390px;
+	height:450px;*/
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	transition: all 5s;
+	/**/
+}
+
+.imgTypography li img:hover {
+	transform: scale(1.2);
+	/**/
+}
+
+
+/*----底部footer------*/
+
+footer {
+	width: 100%;
+	height: 250px;
+	background-color: #DDDDDD;
+}
+
+
+/*底部关于整个div*/
+
+footer .guanyu {
+	/*border: 1px solid #CD426C;*/
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+/*左方logo*/
+
+footer .guanyu .weddeing_logo {
+	position: relative;
+	margin: 70px;
+	width: 30%;
+	float: left;
+}
+
+footer .guanyu .weddeing_logo .top_logo {
+	position: absolute;
+	top: 50px;
+	left: 30px;
+}
+
+
+/*底部右边块大信息*/
+
+footer .guanyu .guanyu_list {
+	position: absolute;
+	left: 360px;
+	width: 65%;
+}
+
+
+/*底部每一个块信息*/
+
+footer .guanyu .guanyu_list .foot_nav {
+	margin: 60px auto;
+	text-align: center;
+	float: left;
+	width: 25%;
+}
+
+footer .guanyu .guanyu_list .foot_nav .foot_nav_title {
+	margin: 10px;
+	font-size: 14px;
+}
+
+footer .guanyu .guanyu_list .foot_nav .foot_nav_list li {
+	margin: 10px;
+	color: #656565;
+}
+
+footer .guanyu .guanyu_list .foot_nav .foot_nav_list li:hover {
+	color: #CD426C;
+}

@@ -1,0 +1,93 @@
+@charset "utf-8";
+/*--------收银台信息*/
+.payment{
+	/*border: 1px solid #747474;*/
+	width: 100%;
+}
+.payment .tip{
+	/*border: 1px solid #747474;*/
+	float: left;
+	width: 66%;
+}
+.payment .tip .order_number{
+	line-height: 26px;
+	font-size: 16px;
+	margin: 5px;
+}
+.payment .tip .tell{
+	line-height: 20px;
+	height: 20px;
+	font-size: 14px;
+	color: #747474;
+	margin: 0 5px;
+}
+.strong{
+	color: #E41688;
+}
+/*-------------右边应付金额*/
+.payment .total_money{
+	/*border: 1px solid #747474;*/
+	width: 30%;
+	float: left;
+	text-align: right;
+}
+.payment .total_money .shouldPay{
+	line-height: 26px;
+	font-size: 16px;
+	margin: 5px;
+}
+
+.payment .total_money .pay_detail{
+	line-height: 20px;
+	height: 20px;
+	font-size: 14px;
+	margin: 0 5px;
+}
+/*----------选择支付方式*/
+.choice_payment{
+	width: 100%;
+	border-top:5px solid #EEEEEE;
+	line-height: 26px;
+	font-size: 16px;
+	margin: 5px;
+}
+.rol{
+	position: relative;
+	border-bottom: 1px solid #DDDDDD;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	height: 35px;
+	/*transition: all .3s;*/
+}
+div.rol:hover{
+	border-bottom: 1px solid #000000;
+}
+.check{
+	position: absolute;
+	top: 25%;
+	width: 15px;
+	height: 15px;
+}
+.rol .image{
+	position: absolute;
+	left: 2%;
+	height: 35px;
+	width: 100px;
+}
+.rol img{
+	height: 100%;
+	width: 100%;
+}
+.commit_pay{
+	font-family: "微软雅黑";
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px;
+	background-color: #666666;
+	color: white;
+	float: right;
+	width: 100px;
+}
+.commit_pay:hover{
+	color: white;
+}

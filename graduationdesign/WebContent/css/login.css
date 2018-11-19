@@ -1,0 +1,277 @@
+@charset "utf-8";
+/*------主要包含内容---------*/
+.login_contain {
+	position: relative;
+	width: 100%;
+	height: 510px;
+}
+/*---------------------轮番图大小*/
+.image-content {
+	height: 500px;
+	/*width:1200px;*/
+	width: 98%;
+}
+
+/*-------------------------登录模块*/
+.login {
+	position: absolute;
+	border-radius: 4px;
+	height: 400px;
+	top: 35px;
+	left: 90px;
+	background-color: white;
+	opacity: 0.9;
+}
+/*----------------------------登录标题*/
+.login_title {
+	color: #656565;
+	margin: 20px 0 10px 25px;
+	font-weight: bolder;
+	font-size: 14px;
+}
+/*-------------------------------------登录用户密码*/
+.pass-login {
+	position: relative;
+	margin: 20px;
+}
+
+.posi {
+	position: relative;
+}
+/*------------------------小图标签*/
+.pass-login .pass-password_user {
+	position: absolute;
+	height: 10px;
+	width: 17px;
+	left: 11px;
+	top: 10px;
+	padding-bottom: 10px;
+}
+/*---------------------方框用户名密码*/
+.pass-login .password_user {
+	border: 1px solid #e7e7e7;
+	border-radius: 2px;
+	background-color: white;
+	display: block;
+	padding: 7px 10px 7px 36px;
+	width: 228px;
+	height: 26px;
+	line-height: 26px;
+}
+
+.label_user {
+	top: 11px;
+	background: url(../img/icon/input_icon.png) 0 0px no-repeat;
+}
+
+.label_password {
+	top: 55px;
+	background: url(../img/icon/input_icon.png) -16px 0 no-repeat;
+}
+/*---------------------自动登录登录遇到问题（找回密码）*/
+.pass-login .pass-login-label-3 {
+	margin-left: 5px;
+	top: 103px;
+	left: 11px;
+	color: #656565;
+}
+
+.checkBox {
+	margin-left: 10px;
+	margin-top: 2px;
+}
+
+.pass-login .big_link {
+	float: right;
+	text-decoration: none;
+	color: #656565;
+}
+
+.pass-login .big_link:hover {
+	color: #E41688;
+}
+/*---------------------------------登录框*/
+.pass-login .p1 {
+	position: absolute;
+	text-align: center;
+	border-radius: 6px;
+	background-color: #CD426C;
+	top: 140px;
+	width: 275px;
+	line-height: 40px;
+	height: 40px;
+}
+
+.pass-login .p1 .Submit {
+	cursor: pointer;
+	height: 41px;
+	font-size: 20px;
+	font-weight: bolder;
+	font-family: Microsoft YaHei, SimHei, Tahoma;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+/*--------------------------其他方式登录*/
+.login .qitafangshi {
+	position: absolute;
+	bottom: 120px;
+	left: 30px;
+}
+
+.login .qitafangshi .qitafangshi-title {
+	color: #3E3E3E;
+	float: left;
+}
+/*-------------------------微博qq包裹*/
+.login .qitafangshi .qitafangshi-login {
+	float: left;
+	margin-top: -18px;
+	margin-left: 36px;
+	position: relative;
+}
+
+.login .qitafangshi .weiboqq .weibo {
+	position: absolute;
+	top: 8px;
+	margin-right: 15px;
+	width: 24px;
+	height: 32px;
+	padding-left: 18px;
+	background: url(../img/icon/qqweibo.png) 0 -9px no-repeat;
+}
+
+.login .qitafangshi  .weiboqq .weibo:hover {
+	background: url(../img/icon/qqweibo.png) 0 -52px no-repeat;
+}
+
+.login .qitafangshi  .weiboqq .qq {
+	position: absolute;
+	top: 8px;
+	left: 45px;
+	width: 24px;
+	height: 32px;
+	padding-left: 18px;
+	background: url(../img/icon/qqweibo.png) -45px -9px no-repeat;
+}
+
+.login .qitafangshi .weiboqq .qq:hover {
+	background: url(../img/icon/qqweibo.png) -45px -52px no-repeat;
+}
+
+/*------------------------没有密码 注册密码*/
+.login .login-info {
+	width: 294px;
+	border-top: 1px solid #999999;
+	position: absolute;
+	top: 300px;
+	padding: 20px 0 0 22px;
+}
+
+.login .login-info .login-create {
+	padding-bottom: 15px;
+	color: #656565;
+}
+
+.login .login-info .link-create {
+	font-weight: bolder;
+	font-size: 14px;
+	margin-left: 200px;
+}
+/*----------------------------找回密码*/
+.big_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 940px;
+	background-color: #000;
+	filter: alpha(opacity = 50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	z-index: 10;
+	display: none;
+	/*border: 1px solid black;*/
+}
+/*---------------找回密码的包裹*/
+.Retrieve_password {
+	z-index: 11;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: white;
+	position: absolute;
+	top: 30%;
+	left: 35%;
+	width: 400px;
+	height: 200px;
+	display: none;
+}
+/*-----------文字的样式*/
+.Retrieve_password .style {
+	padding: 12px 0 0 20px;
+	color: #747474;
+}
+/*-------------------画线条*/
+.Retrieve_password .line_retrieve {
+	margin-top: 20px;
+	border-bottom: 1px solid #C0C0C0;
+}
+/*--------------------填写邮箱*/
+.Retrieve_password .address {
+	position: relative;
+	/*border: 1px solid #C0C0C0;*/
+	height: 50px;
+	width: 90%;
+}
+
+.address_electric {
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+	border-radius: 2px;
+	height: 26px;
+	line-height: 26px;
+}
+
+.text {
+	position: absolute;
+	bottom: 5px;
+	left: 65px;
+	border: 1px solid #e7e7e7;
+	border-radius: 2px;
+	background-color: white;
+	display: block;
+	padding: 5px;
+	width: 228px;
+}
+/*------------------------按钮*/
+.Retrieve_password .retrieve_button {
+	position: relative;
+	/*border: 1px solid #C0C0C0;*/
+	height: 50px;
+	width: 90%;
+}
+
+.retrieve_submit {
+	position: absolute;
+	top: 10px;
+	background-color: #CD426C;
+	color: white;
+	width: 63px;
+	border-radius: 2px;
+	height: 26px;
+	line-height: 26px;
+}
+
+.retrieve_comeback {
+	position: absolute;
+	top: 10px;
+	left: 65px;
+	height: 26px;
+	line-height: 26px;
+	width: 61px;
+	text-align: center;
+	background-color: #E7E7E7;
+	border: 1px solid #e7e7e7;
+	border-radius: 2px;
+}

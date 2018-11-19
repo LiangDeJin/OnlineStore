@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后台管理页面</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<!--管理界面的css-->
+		<!--颜色换肤-->
+		<!--<link rel="stylesheet" href="css/management.css" />-->
+		<!--灰色颜色换肤-->
+		<link rel="stylesheet" href="css/manage.css" />
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js" ></script>
+		<script type="text/javascript" src="js/management.js" ></script>
+	</head>
+	<body>
+		<!--固定的管理员页面的头部-->
+		<div class="head">
+			<div class="leftArea ">
+				<div class="logo Mleft">
+					<img class="bottom" src="img/icon/logo.png" />
+					<img class="top" src="img/icon/geibaobao.png" />
+				</div>
+			</div>
+			<div class="rightArea ">
+				<div class="login_Register Mtop">
+					<a class="white">Welcome，管理员</a>
+					<a class="white">退出登录</a>
+				</div>
+			</div>
+		</div>
+		<div class="contentManage">
+		<!--固定管理员页面的左部-->
+			<div class="nav">
+				<ul>
+					<li>
+						<div>商品管理</div>
+						<ul>
+							<li><a href="add.html" target="manage_frame">增加商品</a></li>
+							<li><a>编辑商品</a></li>
+							<li><a>删除商品</a></li>
+						</ul>
+					</li>
+					<li>
+						<div>订单管理</div>
+						<ul>
+							<li><a>订单状态</a></li>
+							<li><a>商品发货</a></li>
+							<li><a>商品退货</a></li>
+						</ul>
+					</li>
+					<li>
+						<div>用户管理</div>
+						<ul>
+							<li><a>编辑用户</a></li>
+							<li><a>删除用户</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="manage_cont">
+					<iframe src="bookstrap.html" id="myFarme" name="manage_frame" scrolling="no"></iframe>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

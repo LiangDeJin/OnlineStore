@@ -1,0 +1,614 @@
+@charset "utf-8";
+/*加入购物车的+1css*/
+.addone{
+	position: absolute;
+	color: #CD426C;
+	font-weight: bolder;
+	font-size: 16px;
+	top:13px ;
+	right:170px;
+	display: none;
+}
+/*详细页面  css*/
+/*--------------------详细页面  包裹----------*/
+.detail{
+	/*border: 1px solid black;*/
+	width: 100%;
+}
+/*--------------------------详细上方包裹--------------*/
+.wrap{
+	background: #f2f2f2;
+	height: 40px;
+}
+.wrap_cont{
+	/*border: 1px solid black;*/
+	width: 1210px;
+	margin: 0 auto;
+	padding: 13px 0 7px;
+}
+.wrap_cont span{
+	/*border: 1px solid black;*/
+	margin: 0 5px;
+	color: #666666;
+}
+.detail_top{
+	position: relative;
+	/*border: 1px solid #999999;*/
+	width: 1210px;
+	height: 600px;
+}
+/*------------------------详细页面中的图片展示--------*/
+.detail_pic{
+	float: left;
+	width: 352px;
+	height: 600px;
+}
+
+.detail_pic .main_pict{
+	width: 352px;
+	height: 451px;
+	border:1px solid #eee;
+	margin-bottom: 20px;
+}
+.detail_pic .main_pict img{
+	width: 352px;
+	height: 451px;
+}
+.detail_pic .main_pict .tobig{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 250px;
+	background-color: #C0C0C0;
+	opacity: 0.5;
+}
+.detail_pic .To_big{
+	position: absolute;
+	left: 360px;
+	top: 0;
+	/*border:1px solid #eee;*/
+	width:500px;
+	height:550px;
+	overflow: hidden;
+/*	z-index: 8;*/
+}
+.detail_pic .To_big .image_div{
+	position: absolute;
+	z-index: 8;
+	display: none;
+}
+.detail_pic .To_big .image_div img{
+	position: absolute;
+	z-index: 8;
+	/*transform: scale(1.2)*/
+}
+.detail_pic .spct_list{
+	width:360px;
+	position: relative;
+	height: 68px;
+	/*border:1px solid #eee;*/
+	margin-bottom: 18px;
+	display: table;
+}
+.detail_pic .spct_list ul{
+
+	display: table-row;
+}
+.detail_pic .spct_list ul li{
+	width: 60px;
+	height: 70px;
+	float: left;
+	border: solid 1px #DDDDDD;
+	padding: 2.5px;
+	margin-right:5px;
+	display: table-cell;
+}
+.detail_pic .spct_list ul .current_pict{
+	border: solid 1px #EA339B;
+}
+.detail_pic .spct_list ul li img{
+	width: 59px;
+	height: 69px;
+	display: block;	
+}
+/*-----------------------详细页面中的介绍 中间---------*/
+.detail_tet{
+	position: absolute;
+	left: 352px;
+	margin-left: 30px;
+	width: 590px;
+	/*border: solid 1px #DDDDDD;*/
+	/*height: 568px;*/
+	font-size: 14px;
+}
+/*-------------------------------详细页面中间的标题*/
+.detail_tet .detail_name{
+	font-weight: normal;
+	font-size: 20px;
+	/*border: solid 1px #DDDDDD;*/
+	height: 70px;
+	line-height: 35px;
+	display: block;
+}
+/*----------------------------------详细页面里面的价格显示*/
+.detail_tet p.price{
+	line-height: 40px;
+	border-bottom: solid 1px #DDDDDD;
+	font-size: 16px;
+	padding-bottom: 10px;	
+}
+
+.detail_tet p.price label{
+	display: inline-block;
+	font-size: 14px;
+}
+/*-----------------------------详细页面里面的尺码显示*/
+.detail_tet p.size{
+	height: 30px;
+	line-height: 30px;
+	padding: 10px 0;
+	
+}
+.detail_tet p.size select{
+	display: inline-block;
+	border: solid 1px #DDDDDD;
+	width: 83px;
+	margin-right: 15px;	
+}
+/*----------------------------详细页面里面的数量选择*/
+p.num {
+	height: 30px;
+	line-height: 30px;
+	padding: 10px 0;
+	
+}
+p.num select{
+	display: inline-block;
+	border: solid 1px #DDDDDD;
+	width: 83px;
+	margin-right: 15px;	
+}
+
+/*-----------------------------详细页面里面的颜色选择*/
+.detail_tet p.color{
+	height: 30px;
+	line-height: 30px;
+	padding: 10px 0;
+	
+}
+.detail_tet p.color select{
+	display: inline-block;
+	border: solid 1px #DDDDDD;
+	width: 83px;
+	margin-right: 15px;	
+}
+/*--------------------------加入购物车和在线客服*/
+ .detail_button{
+	position: relative;
+	height: 80px;
+}
+ .detail_button a.append_cloth{
+	border: solid 1px  #E61E58;
+	background: #E61E58 url(../img/icon/button1.png) no-repeat 140px 0;
+	position: absolute;
+	text-align: center;
+	width: 188px;
+	height: 45px;
+	line-height: 45px;
+	margin: 10px 20px 10px 0;
+	font-size: 16px;
+	color: white;
+}
+ .detail_button a.talk{
+	border: solid 1px   #A0A0A0;
+	background: url(../img/icon/button1.png) no-repeat 130px -100px;
+	position: absolute;
+	text-align: center;
+	left:210px;
+	width: 188px;
+	height: 45px;
+	line-height: 45px;
+	margin: 10px 20px 10px 0;
+	font-size: 16px;
+}
+
+/*-----------------------解释文字 度身定制*/
+.detail_explain{
+	line-height: 25px;
+	
+}
+
+/*--------详细页面中的看了又看 最右-------------*/
+.look_look{
+	float: right;
+	/*border: solid 1px #DDDDDD;*/
+	width: 210px;
+	height: 568px;
+	position: relative;
+	text-align: center;
+}
+/*-------------------包裹标题和横线------*/
+.Look_title_line{
+	position: relative;
+	line-height: 40px;
+	font-size: 12px;
+	/*border: solid 1px #DDDDDD;*/
+	
+}
+/*-----------------标题-----------*/
+.Look_title{
+	position: relative;
+	display: inline-block;
+	background: white;
+	z-index: 2;
+	padding: 0 20px;
+}
+/*------------------划线----------*/
+.line{
+	position: absolute;
+	left:0;
+	right: 0;
+	top:20px;
+	height: 1px;
+	z-index:1;
+	background: #DDDDDD;
+}
+/*--------------看了又看的小图展示---------*/
+.Look_list{
+	/*border: solid 1px #DDDDDD;*/
+	width: 180px;
+	height: 550px;
+	overflow: hidden;
+}
+.Look_list ul li{
+	/*border: solid 1px #DDDDDD;*/
+	position: relative;
+	padding: 8px 0;
+}
+.Look_list ul li a img{
+	/*border: solid 1px #DDDDDD;*/
+	width: 120px;
+	height: 160px;
+	overflow: hidden;
+}
+.Look_list ul li a p{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 12px;
+	line-height: 20px;
+	background: rgba(255,255,255,0.9);
+}
+
+
+/*-----主要详情（商品详情  评论）-----------*/
+/*-------------底部详情-------------*/
+.detail_content{	
+	/*border: 1px solid #f7f7f7;*/
+}
+/*-------------商品介绍商品评价的选项卡*/
+/*----------------------智能选显卡*/
+#tab_main_list{
+	position: relative;
+	width: 1210px;
+	top: 0;
+	z-index: 999;
+	margin-left: 3.761%;
+}
+
+.tab_main{
+	height: 39px;
+	width: 1210px;
+	margin: 0 auto;
+	background-color: #f7f7f7;
+	border:  1px solid #EEEEEE;;
+	border-bottom: 1px solid #E61E58;
+		
+}
+.tab_main span{
+	padding: 10px 23px;
+	font-size: 14px;
+	text-align: center;
+	display: inline-block;
+}
+.tab_main span a{
+	color: #656565;
+}
+/*-------------------------当前改变颜色和背景*/
+ .tab_main span.current_title {
+	background-color: #E61E58;
+
+}
+ .tab_main span.current_title a {
+	color: white;
+}
+
+ .tab_main span.current_title a:hover{
+	color: white;
+}
+
+/*-------------------------商品介绍（本身介绍） 评论推荐*/
+#detail_main{
+	position: relative;
+	/*border: 1px solid yellow;*/
+	width: 1210px;
+}
+/*----------------------商品介绍--------------*/
+#detail_main #show_messeage{
+	/*border: 1px solid darkblue;*/
+	line-height: 35px;
+	font-size: 16px;
+	padding: 25px 0;
+	width: 100%;
+}
+.main_tit{
+	font-size: 18px;
+	width: 1150px;
+	border-bottom: solid 1px #A0A0A0;
+	/*border: solid 1px #A0A0A0;*/
+}
+.main_message{
+	width: 1150px;
+	/*border: solid 1px #A0A0A0;*/
+	
+}
+.main_message ul li{
+	width: 287px;
+	height: 35px;
+	float: left;
+}
+.main_message ul li.instructions{
+	width: 1100px;
+}
+.main_message_pic{
+	width: 800px;
+}
+/*------------------------评论---------------*/
+#detail_main #show_comment{
+	line-height: 35px;
+	font-size: 16px;
+	padding: 25px 0 0 0;
+	width: 100%;
+	/*border: 1px solid #A0A0A0;*/
+}
+.rate{
+	/*border: 1px solid #A0A0A0;*/
+	width: 250px;
+	float: left;
+	padding: 20px 0 0;
+	text-align: center;
+}
+.rate strong{
+	color: #e4393c;
+	/*font-weight: 400;	
+	font-size:50px;
+	line-height: 30px;
+	font-family: arial;*/
+	font: 400 50px/30px arial;
+}
+.rate span.bilv{
+	color: #e4393c;
+	font-size: 24px;
+}
+.rate span{
+	color: #656565;
+	font-size: 12px;
+}
+.perscent{
+	margin-top: 5px;
+	/*border: 1px solid #A0A0A0;*/
+	width:250px;
+	float: left;
+	text-align: center;
+}
+.perscent dl{
+	padding: 10px 0;
+}
+.perscent dt{
+	clear: both;
+	float: left;
+	color: #999999;
+	font-size: 12px;
+	width: 90px;
+	line-height: 25px;
+	overflow: hidden;
+	/*border: 1px solid #A0A0A0;*/
+}
+.perscent dd{
+	float: left;
+	background-color: #efefef;
+	width: 120px;
+	line-height: 20px;
+	height: 15px;
+	margin-top: 6px;
+	overflow: hidden;
+}
+.perscent dd div.perscent_line{
+	background-color: #e4393c;
+	height: 15px;
+	float: left;
+}
+/*-------------------------小的评论选项卡*/
+.main_tab{
+	background-color: #E5E5E5;
+	/*border: 1px solid #A0A0A0;*/
+	padding-left: 10px;
+	clear: both;
+}
+.main_tab span{
+	/*border: 1px solid #A0A0A0;*/
+	padding: 5px 10px;
+	cursor: pointer;
+	font-size: 14px;
+}
+/*-----------------------------评论列表*/
+.main_list{
+	/*border: 1px solid #A0A0A0;
+	height:750px;*/
+}
+.main_list .comments{
+	/*border: 1px solid black ;*/
+	margin-top: 5px;
+	width: 1150px;
+	height: 110px;
+}
+/*----------------------------顾客评价左边的评论时间*/
+.main_list .comments .people{
+	/*border: 1px solid #A0A0A0;*/
+	float: left;
+	width: 120px;
+	height:50px;
+	font-size: 12px;
+	padding: 0 15px; 
+	margin-top: 10px;
+	clear: left;
+}
+.main_list .comments .people .first_comm{
+	/*border: 1px solid #A0A0A0;*/	
+	line-height: 18px;
+	color: #999999;
+	
+}
+.main_list .comments .people .first_time{
+	/*border: 1px solid #A0A0A0;*/	
+	line-height: 18px;
+	color: #C0C0C0;
+}
+/*---------------------------评论的文字和图片*/
+.main_list .comm{
+	/*border: 1px solid #A0A0A0;*/
+	float: left;
+	width: 650px;
+	font-size: 12px;
+	padding: 0 15px; 
+	margin-top: 5px;
+}
+.main_list .comm .people_comm{
+	line-height:20px;
+	color: #747474;
+}
+.main_list .comm .people_pict{
+	/*float: left;*/
+}
+.main_list .comm .people_pict ul li{
+	float: left;
+	border: 2px solid #f2f2f2;
+	padding: 2px;
+	margin:5px 8px 0 0;
+	width: 40px;
+	height: 50px;
+
+}
+.main_list .comm .people_pict img{
+	width: 40px;
+	height: 50px;
+	/*css放大 小图放大*/
+	transition: 0.2s transform;
+}
+.main_list .comm .people_pict img:hover{
+	transform: scale(8,10);
+}
+/*-------------------评论的人和买的类型*/
+.comments .people_buymessage{
+	/*border: 1px solid #A0A0A0;*/
+	float: left;
+	width: 250px;
+	height:50px;
+	font-size: 12px;
+	padding: 0 10px; 
+	margin-top: 20px;
+	text-align: right;
+	line-height:20px;
+	color: #747474;
+}
+/*--------------------详细页面评论分页*/
+.main_list .common_ye{
+	clear: both;
+	/*border: 1px solid #A0A0A0;*/
+	font-size: 12px;
+	margin-top: 10px;
+	line-height:20px;
+	color: #747474;
+}
+/*-------推荐-------------*/
+#detail_main #suggest{
+	width: 100%;
+	line-height: 35px;
+	font-size: 16px;
+	padding: 25px 0;
+}
+#suggest .main_suggest{
+	/*border: 1px solid #A0A0A0;*/
+	width: 1150px;
+	/*height: 800px;*/
+	font-size: 12px;
+	padding: 20px 0;
+	
+}
+#suggest .main_suggest ul li{
+	border: 1px solid #f5f5f5;
+	width: 200px;
+	margin:0 0 30px 25px;
+	line-height: 20px;
+	float: left;
+	text-align: right;
+	cursor: pointer;
+	
+}
+#suggest .main_suggest ul li:hover{
+	/*盒子阴影  阴影类型，X轴位移，Y轴位移，阴影大小，阴影扩展和阴影颜色*/
+	/*带光晕效果的*/
+	box-shadow:0 0 10px 3px rgba(0, 0, 0, 0.25);
+	/*box-shadow:3px 3px 5px rgba(0, 0, 0, 0.25);*/
+	
+}
+#suggest .main_suggest ul li img{
+	width: 200px;
+	height: 280px;
+}
+.img_name{
+	overflow: hidden;
+	width: 200px;
+	height: 20px;
+	background: #f7f7f7;
+}
+.img_price{
+	background: #f7f7f7;
+	font-size: 14px;
+	color: #e4393c;
+	font-family: verdana;
+	font-weight: bold;
+}
+/*----------------加入购物车的特效的css样式-*/
+div.floating-cart{
+	position:absolute;
+	top:0;
+	left:0; 
+	width: 352px;
+	height: 451px;
+	background:#fff;
+	z-index:200;
+	overflow:hidden;
+	box-shadow:0px 5px 31px -1px rgba(0, 0, 0, 0.15);
+	display:none;
+}				
+div.floating-cart.moveToCart{
+	/*css !important作用是提高指定CSS样式规则的应用优先权。
+	 在CSS中，通过对某一样式声明! important ，可以更改默认的CSS样式优先级规则，使该条样式属性声明具有最高优先级
+	 css有继承的样式，加上!importanrt可以覆盖父级的样式。*/
+	left: 85% !important;
+	top: 3% !important;
+	width:10px;
+	height: 10px;	
+	-webkit-transition: all 800ms ease-in-out;/*Safari、Chrome。*/
+	   -moz-transition: all 800ms ease-in-out;/*Firefox*/
+		-ms-transition: all 800ms ease-in-out;/* Internet Explorer */
+		 -o-transition: all 800ms ease-in-out;/*Opera浏览器*/
+ 		    transition: all 800ms ease-in-out;
+}
+.main_pict img{
+	width: 100%;
+	height: 100%;
+}			

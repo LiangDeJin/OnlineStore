@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--公用-->
+		<link rel="stylesheet" href="css/manage.css" />
+		
+		<link rel="stylesheet" href="css/mybuycart.css" />
+		<link rel="stylesheet" href="css/address.css" />
+		<title>增加商品</title>
+	</head>
+
+	<body>
+		<div class="manage">
+
+			<div class="address_message">
+				<!--增加商品-->
+				<form action="address" id="address" method="post">
+
+					<div class="consignee_information">
+						<div class="information_title">增加商品</div>
+						
+						<!--<div class="form_group">
+							<label><strong>*</strong>商品名称:</label>
+							<input type="text" name="" class="form_control" placeholder="请输入商品名称">
+						</div>
+						<p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>图片上传:</label>
+							<input type="file" name="" class="form_control" placeholder="请输入商品名称">
+						</div>
+						<p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>商品价格:</label>
+							<input type="text" name="" class="form_control" placeholder="请输入商品价格">
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label>衣服领型:</label>
+							<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label>衣服袖长:</label>
+							<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label>衣服裙型:</label>
+							<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>商品库存:</label>
+								<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>商品品牌:</label>
+								<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>商品分类:</label>
+								<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>商品风格:</label>
+								<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>商品颜色:</label>
+								<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>商品腰型:</label>
+								<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>商品材质:</label>
+								<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>厚度指数:</label>
+								<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>弹力指数:</label>
+								<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>时尚元素:</label>
+								<select name="">
+								<option value="1">白色</option>
+								<option value="2">灰色</option>	
+								<option value="3">白色</option>
+								<option value="4">灰色</option>		
+								<option value="5">白色</option>	
+							</select>
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>设计裁剪:</label>
+							<input type="text" name="" class="form_control" placeholder="请输入商品名称">
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>穿着效果:</label>
+							<input type="text" name="" class="form_control" placeholder="请输入商品名称">
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>穿着场合:</label>
+							<input type="text" name="" class="form_control" placeholder="请输入商品名称">
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>上市时间:</label>
+							<input type="text" name="" class="form_control" placeholder="请输入商品名称">
+						</div><p class="hr5"></p>
+						<div class="form_group">
+							<label><strong>*</strong>细节说明:</label>
+							<input type="text" name="" class="form_control" placeholder="请输入商品名称">
+						</div><p class="hr5"></p>
+					
+						-->
+					</div>
+
+			</div>
+	</body>
+
+</html>

@@ -1,0 +1,66 @@
+.bounced{
+	position: absolute;
+	top: 40%;
+	left: 39%;
+	width: 300px;
+	height: 200px;
+	font-size: 14px;
+	color: #666666;
+	border: 1px solid  #CECDCD;
+	box-shadow: 1px 1px 10px slategray;
+	display: none;
+}
+.bounced .title{
+	text-align: center;
+	line-height: 25px;
+	height:25px;
+	background-color: #F7F7F7;
+	padding:10px;
+}
+.bounced .con{
+	background-color: white;
+	line-height: 90px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	height:90px;
+}
+.bounced .fot{
+	padding: 10px;
+	height: 45px;
+	background-color: #F7F7F7;
+}
+.bounced button{
+	background-color: #E61E58;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: white;
+	border: none;
+	width: 100%;
+	padding: 10px;
+}
+/*-------------------------*/
+.bounced .yesorno{
+	padding: 10px;
+	height: 45px;
+	background-color: #F7F7F7;
+}
+.bounced .yes{
+	background-color: #E61E58;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: white;
+	border: none;
+	width: 45%;
+	padding: 10px;
+}
+.bounced .no{
+	float: right;
+	background-color: #666666;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: white;
+	border: none;
+	width: 45%;
+	padding: 10px;
+}

@@ -1,0 +1,72 @@
+@charset "utf-8";
+/*上传的包裹*/
+.upload_box {
+	width:450px;
+	margin: 0 auto;
+}
+/*预览的包裹*/
+.upload_preview {
+	border: 1px solid #DDDDDD;
+	height: 246px;
+	display: none;
+	overflow: hidden;
+	_zoom: 1;
+}
+/*显示图片上传状态*/
+/*照片命名的字体大小*/
+.size {
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+}
+/*字体长的隐藏*/
+/*.fontname{
+	font-size: 12px;
+	width: 45px;
+	overflow: hidden;
+}*/
+/*------------图片操作名字包裹*/
+.upload_append_list {
+	border: 1px solid #999999;
+	margin: 5px;
+	width: 100px;
+	height: 110px;
+	float: left;
+	position: relative;
+	text-align: center;
+}
+
+/*-----------照片的最大值*/
+.upload_image {
+	max-height: 85px;
+	max-width: 85px;
+}
+/*----------上传图片的小点展现百分比*/
+.upload_progress {
+	display: none;
+	padding: 5px;
+	border-radius: 10px;
+	color: #fff;
+	background-color: #CD426C;
+	position: absolute;
+	font-size: 10px;
+	left: 24px;
+	top: 45px;
+}
+/*---------------------------------*/
+/*上传图片的按钮*/
+.upload_submit_btn {
+	display: none;
+}
+
+/*----------上传的文字包裹*/
+.upload_inf{
+	height: 60px;
+	overflow: hidden;
+	/*border: 1px solid #999999;*/
+}
+/*----------判断照片上传的结果的css*/
+.typecss {
+	color: #656565;
+	font-size: 12px;
+}

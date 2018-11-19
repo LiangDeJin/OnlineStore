@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<!-- 文件上传的最大值 -->
+	<constant name="struts.multipart.maxSize" value="52428800"></constant>
+	
+	<package name="default" namespace="/" extends="struts-default,json-default">
+
+		<!-- 登录功能 -->
+		<action name="loginAction" class="loginAction" method="login">
+			<result name="success">/index.jsp</result>
+			<result name="flase">/login.jsp</result>
+		</action>
+
+		<!-- 跳转到首页 -->
+		<action name="indexAction" class="loginAction" method="index">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<action name="emailLoginAction" class="loginAction" method="emailLogin">
+			<result name="success" type="redirect">/userMessageAction</result>
+		</action>
+
+		<!-- 跳转到用户信息 -->
+		<action name="userMessageAction" class="loginAction" method="userMessage">
+			<result name="success">/myWeddingDress.jsp</result>
+			<result name="false">/index.jsp</result>
+		</action>
+
+
+		<!-- 退出登录 -->
+		<action name="removeAction" class="loginAction" method="remove">
+			<result name="success">/login.jsp</result>
+		</action>
+
+		<!-- 注册功能 -->
+		<action name="registerAction" class="registerAction" method="registerAction">
+			<result name="success">/login.jsp</result>
+			<result name="false">/register.jsp</result>
+		</action>
+
+		<!-- 分类查询功能 -->
+		<action name="selectListAction" class="selectListAction"
+			method="select">
+			<result type="json"></result>
+		</action>
+
+		<!-- 跳转到分类页 -->
+		<action name="selectAllClothesAction" class="selectListAction"
+			method="selectAll">
+			<result name="success">/nav_list.jsp</result>
+		</action>
+
+		<!-- 服装的详细页面 -->
+		<action name="detailAction" class="detailAction" method="detail">
+			<result name="success">/detail.jsp</result>
+		</action>
+
+		<!-- 服装详细页面里的加入购物车 -->
+		<action name="addCarAction" class="detailAction" method="addCar">
+
+			<!-- 通过addCarAction 返回的name 用 stream 的形式可以不进行跳转 -->
+			<!-- type="stream" 把一般内容输出到流 -->
+
+			<result name="add" type="stream">
+
+				<!-- 参数contentType的地方指定为 text/html -->
+				<!-- contentType 内容类型，和互联网MIME标准中的规定类型一致，例如text/plain代表纯文本，text/xml表示XML，image/gif代表GIF图片，image/jpeg代表JPG图片 -->
+
+				<param name="contentType">text/html</param>
+
+				<!-- 参数inputName指定输入流的名称。和前面的文件名一样，Action里提供inputStream属性。 -->
+				<!-- 下载文件的来源流，对应着action类中某个类型为Inputstream的属性名 -->
+
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+		<!-- 我的购物车跳转 -->
+		<action name="myCarAction" class="myCarAction" method="myCar">
+			<result name="success">/mybuycar.jsp</result>
+		</action>
+
+		<!-- 我的购物车删除里面的内容 -->
+		<action name="deleteCarAction" class="myCarAction" method="deleteCar"></action>
+		<!-- 更新数据库里面的购物车数量 -->
+		<action name="updateCarAction" class="myCarAction" method="updateCar"></action>
+		<!-- 更新数据库里面的购物车选择状态 -->
+		<action name="choiceCarAction" class="myCarAction" method="choiceCar"></action>
+		<!-- 更新数据库里面的购物车全选状态 -->
+		<action name="choiceALlCarAction" class="myCarAction" method="choiceALlCar"></action>
+
+		<!-- 进行结账的action -->
+		<action name="sortOutAction" class="sortOutAction" method="sortOut">
+			<result name="success">/address.jsp</result>
+		</action>
+
+		<action name="selectCityAction" class="sortOutAction" method="selectCity">
+			<result type="json"></result>
+		</action>
+
+		<!-- 填写地址的action -->
+		<action name="writeAddressAction" class="writeAddressAction"
+			method="writeAddress">
+			<result name="success">/pay.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<!-- 收银台的action -->
+		<action name="payAction" class="writeAddressAction" method="pay">
+			<result name="success">/successpay.jsp</result>
+			<result name="topaymentsuccess">/paymentsuccess.jsp</result>
+		</action>
+
+		<!-- 用户信息 -->
+		<action name="ResourceAction" class="ResourceAction" method="Resources">
+			<result name="success">/myresourse.jsp</result>
+		</action>
+
+		<!-- 我的订单 -->
+		<action name="MyOrderAction" class="MyOrderAction" method="MyOrder">
+			<result name="success">/myorder.jsp</result>
+		</action>
+		<!-- 状态为1未付款 -->
+		<action name="getState1Action" class="MyOrderAction" method="getState1">
+			<result name="success">/myorder.jsp</result>
+		</action>
+		<!-- 状态为2待发货 -->
+		<action name="getState2Action" class="MyOrderAction" method="getState2">
+			<result name="success">/myorder.jsp</result>
+		</action>
+		<!-- 状态为3待发货 -->
+		<action name="getState3Action" class="MyOrderAction" method="getState3">
+			<result name="success">/myorder.jsp</result>
+		</action>
+
+		<!-- 状态为3确认改变为4 点击确认收货 -->
+		<action name="sureOrderAction" class="MyOrderAction" method="updateState3">
+		</action>
+
+		<!-- 状态为4待发货 -->
+		<action name="getState4Action" class="MyOrderAction" method="getState4">
+			<result name="success">/myorder.jsp</result>
+		</action>
+
+		<!-- 点击退换货 -->
+		<action name="updateState5Action" class="MyOrderAction" method="updateState5">
+			<result name="success" type="redirect">/getState5Action</result>
+		</action>
+		<!-- 状态为5属于退换货 -->
+		<action name="getState5Action" class="MyOrderAction" method="getState5">
+			<result name="success">/returnthing.jsp</result>
+		</action>
+
+		<!-- 地址管理增加地址 -->
+		<action name="addDAction" class="addDAction" method="addD">
+			<result name="success" type="redirect">/ResourceAction</result>
+		</action>
+		<!-- 删除地址 -->
+		<action name="deleteAddressAction" class="addDAction" method="deleteAddress">
+			<result name="success" type="redirect">/ResourceAction</result>
+		</action>
+		<!-- 通过邮箱登录 -->
+		<action name="findpswAction" class="findpswAction" method="findpsw">
+			<result name="success">/login.jsp</result>
+		</action>
+		
+		<!-- 密码修改 -->
+		<action name="changepswAction" class="changepswAction" method="changepsw">
+			<result name="success" type="redirectAction">
+				<param name="actionName">ResourceAction</param>
+				<param name="changepsw">${changepsw}</param>
+			</result>
+		</action>
+		
+		<!-- 我的物流 -->
+		<action name="allLogisticsAction" class="allLogisticsAction" method="allLogistics">
+			<result name="success">/logistic.jsp</result>
+		</action>
+		
+		<action name="getLogisticsByOrderidAction" class="allLogisticsAction" method="getLogisticsByOrderid">
+			<result name="success">/logistic.jsp</result>
+			<result name="false">/logistic.jsp</result>
+		</action>
+		
+		<action name="footPrintAllAction" class="allLogisticsAction" method="footPrintAll">
+			<result name="success">/footprint.jsp</result>
+		</action>
+		
+		<!-- 单图上传 -->
+		<action name="uploadOneAction" class="uploadAction" method="upOne">
+			<result name="success" type="redirect">/userMessageAction</result>
+		</action>
+		
+		<!-- 多图上传 -->
+		<action name="uploadMultipleAction" class="UpMultipleAction" method="upMultiple">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+			<result name="false" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<!-- 搜索 -->
+		<action name="searchAction" class="selectListAction" method="search">
+			<result name="success">/nav_list.jsp</result>
+		</action>
+		
+		<!-- ajax查询所有评论 -->
+		<action name="selectAllCommentsAction" class="selectCommentsAction" method="selectAllComments">
+			<result name="all" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<!-- 获得评论 -->
+		<action name="getCommentsAction" class="selectCommentsAction" method="getComments">
+			<result name="success">/evalution.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

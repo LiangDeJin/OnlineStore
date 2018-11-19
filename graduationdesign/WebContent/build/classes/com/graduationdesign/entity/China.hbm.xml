@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-11 9:50:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.graduationdesign.entity.China" table="CHINA">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" />
+        </property>
+        <many-to-one name="china" class="com.graduationdesign.entity.China" fetch="join" lazy="false">
+            <column name="pid" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,83 @@
+@charset "utf-8";
+/*------------------------填写收货信息*/
+
+.address_message {
+	/*border: 1px solid #A0A0A0;*/
+	width: 100%;
+}
+/*------------------------收货人信息*/
+
+.address_message .consignee_information {
+	/*border: 1px solid #A0A0A0;*/
+	width: 100%;
+}
+.information_title{
+	border-top:1px solid #cccccc;
+	border-bottom:1px solid #CCCCCC;
+	font-size: 16px;
+	padding: 10px;
+}
+.form_group{
+	/*border: 1px solid #A0A0A0;*/
+	width: 40%;
+	float: left;
+	font-size: 14px;
+	padding:0 10px;
+}
+.form_group label{
+	position: relative;
+	display: inline-block;
+	margin:3px 0 0 0;
+}
+/*表单验证错误信息内容*/
+.error{
+	font-size: 11px;
+	color: red;
+}
+
+.form_control{
+	width: 100%;
+	border: 1px solid #A0A0A0;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-family: Microsoft Yahei;
+	line-height: 1.5;
+}
+textarea{
+	height: 120px;
+}
+.strong{
+	color:#CD426C;
+	font-size: 16px;
+}
+.select{
+	width: auto;
+	border: 1px solid #A0A0A0;
+	color: #656565;
+	height: 32px;
+	padding:5px 10px;
+	font-size: 12px;
+	font-family: Microsoft Yahei;
+	line-height: 32px;
+}
+
+/*------------------------订单一览表*/
+.address_message .order_list {
+	width: 100%;	
+}
+
+/*------------------------提交订单*/
+
+.address_message .post_message {
+	width: 100%;
+}
+.commit_order{
+	font-family: STHeiti, Microsoft Yahei, "Helvetica Neue", Helvetica, Arial, sans-serif, MingLiu;
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px;
+	background-color: #CD426C;
+	color: white;
+	float: right;
+	width: 100px;
+}

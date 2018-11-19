@@ -1,0 +1,151 @@
+@charset "utf-8";
+body{
+	font-family: STHeiti, Microsoft Yahei, "Helvetica Neue", Helvetica, Arial, sans-serif, MingLiu;
+}
+iframe{
+	width: 100%;
+	height: 1000px;
+	border: 0;
+}
+.hr5{
+	height: 5px;
+	clear: both;
+}
+.hr10{
+	height: 10px;
+	clear: both;
+}
+/*----------头部*/
+.head{
+	padding: 0;
+	position: fixed;
+	height: 100px;
+	width: 100%;
+	/*background-color: #666666;*/
+	background: url(../img/27.jpg) no-repeat;
+	z-index: 5;
+	border: 1px solid #999999;	
+}
+/*----------------头部左边的位置logo*/
+.leftArea{
+	margin-top:5px;
+	margin-left: 50px;
+	float:left;
+	width:415px;
+}
+.leftArea .logo{
+	margin-top:10px;
+	}
+.leftArea .logo .bottom{
+	margin-top:3px;
+	height:60px; 
+	position:absolute; 
+	left:100px; 
+	z-index:998;
+	}
+.leftArea .logo .top{
+	 position:absolute;
+	 z-index:999;
+	}
+/*----------------头部右边的登录注销等*/
+.rightArea{
+	float:right;
+	width:30%;
+}
+.rightArea .login_Register{
+	position:absolute;
+	right:50px;
+	top:35px
+	}
+.rightArea .login_Register a{
+	font-size:14px;
+	font-weight: bold;
+	padding-left:5px;
+	text-decoration:none;
+	color: white;
+	}
+.rightArea .login_Register a:hover{
+	color:  #E7E7E7;
+	}
+
+/*-----------------------主体部分*/
+.contentManage{
+	position: absolute;
+	top: 101px;
+	width: 100%;
+}
+/*-------------左边固定导航栏*/
+.nav{
+	position: fixed;
+	z-index: 1;
+	/*background-color: #747474;*/
+	background: url(../img/50.jpg);
+	width:13%;
+	height: 99.9%;
+	text-align: center;
+	color: #666666;
+	font-size: 14px;
+}
+.nav ul li div{
+	padding: 8px;
+	font-size: 16px;
+	color: whitesmoke;
+	background-color:  #999999;
+	border-bottom: 1px solid #CCCCCC;
+}
+.nav ul li div:hover{	
+	background-color: #C0C0C0;
+	color: white;	
+}
+.nav ul li ul li{
+	padding: 10px;
+	font-size: 15px;
+	border-bottom: 1px solid #CCCCCC;
+	background-color: #EEEEEE;
+}
+.nav ul li ul li:hover{
+	background-color: #C0C0C0;	
+}
+.nav ul li ul li:hover a{
+	color: white;
+}
+/*--------------右边内容*/
+.manage_cont{
+	float: right;
+	width: 86.9%;
+	height: 100%;
+}
+/*--------------------------------------------------------------商品管理*/
+.manage{
+	/*border: 1px solid #000;*/
+	box-shadow: 1px 1px 10px #666666;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 840px;
+	font-size: 14px;
+	color: #656565;
+}
+
+strong{
+	color: #CD426C;
+	font-size: 16px;
+}
+select{
+	display: inline-block;
+	border: solid 1px #DDDDDD;
+	width:100px;
+	margin-right: 15px;	
+}
+/*====================================================*/
+.leftCon{
+	float: left;
+	width: 45%;
+	/*height: 500px;*/
+	/*border: 1px solid #708090;*/
+}
+.rightCon{
+	float: right;
+	width: 52%;
+	/*height: 500px;*/
+	/*border: 1px solid #708090;*/
+}

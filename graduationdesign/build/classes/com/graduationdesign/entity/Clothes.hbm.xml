@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-8-7 22:11:02 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.graduationdesign.entity.Clothes" table="CLOTHES">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" />
+        </property>
+        <property name="image" type="java.lang.String">
+            <column name="IMAGE" />
+        </property>
+        <property name="money" type="java.lang.Integer">
+            <column name="MONEY" />
+        </property>
+        <property name="Getmodel" type="java.lang.String">
+            <column name="GETMODEL" />
+        </property>
+        <property name="Sleevelength" type="java.lang.String">
+            <column name="SLEEVELENGTH" />
+        </property>
+        <property name="Skirttype" type="java.lang.String">
+            <column name="SKIRTTYPE" />
+        </property>
+        <list name="minImg" inverse="false" table="CLOTHES_IMAGE" lazy="false">
+            <key>
+                <column name="ID" />
+            </key>
+            <list-index></list-index>
+            <element type="java.lang.String">
+                <column name="MINIMG" />
+            </element>
+        </list>
+        <property name="allnumber" type="java.lang.String">
+            <column name="ALLNUMBER" />
+        </property>
+        <property name="pinpai" type="java.lang.String">
+            <column name="PINPAI" />
+        </property>
+        <property name="fenlei" type="java.lang.String">
+            <column name="FENLEI" />
+        </property>
+        <property name="fengge" type="java.lang.String">
+            <column name="FENGGE" />
+        </property>
+        <property name="yaoxing" type="java.lang.String">
+            <column name="YAOXING" />
+        </property>
+        <property name="caizhi" type="java.lang.String">
+            <column name="CAIZHI" />
+        </property>
+        <property name="houdu" type="java.lang.String">
+            <column name="HOUDU" />
+        </property>
+        <property name="tanli" type="java.lang.String">
+            <column name="TANLI" />
+        </property>
+        <property name="shishangyuansu" type="java.lang.String">
+            <column name="SHISHANGYUANSU" />
+        </property>
+        <property name="shejicaijian" type="java.lang.String">
+            <column name="SHEJICAIJIAN" />
+        </property>
+        <property name="xiaoguo" type="java.lang.String">
+            <column name="XIAOGUO" />
+        </property>
+        <property name="shihechangsuo" type="java.lang.String">
+            <column name="SHIHECHANGSUO" />
+        </property>
+        <property name="shangshi" type="java.lang.String">
+            <column name="SHANGSHI" />
+        </property>
+        <property name="xijieshuoming" type="java.lang.String">
+            <column name="XIJIESHUOMING" />
+        </property>
+    </class>
+</hibernate-mapping>

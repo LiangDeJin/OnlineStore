@@ -1,0 +1,296 @@
+@charset "utf-8";/* CSS Document */
+
+
+
+/*----分列表里面  导航栏下方的大图展示 show------*/
+.show{
+
+	position:relative;
+	margin:0 auto;
+	width:1210px;
+	}
+
+/*----左边图展示 show------*/
+.show_left{
+
+	float:left;
+	width:360px;
+	height:480px;
+	}
+.show_left img{
+	width:360px;
+	height:235px;
+	}
+/*----右边图展示 show------*/
+.show_right{
+
+	width:840px;
+	height:480px;
+	float: right;
+	}
+.show_right img{
+	
+	width:840px;
+	height:480px;
+	}
+/*----总列表list ------*/
+.list{
+	clear:both;
+	margin:0 auto;
+	position:relative;
+	width:1210px;
+	}
+
+/*----左边总列表 category_list ------*/
+.category{	
+	/*border:1px solid #999999;*/
+	width:255px;
+	float: left;
+	text-align:center;
+	
+	}	
+/*----左边上方列表  wedding------*/
+.wedding{
+	position: relative;
+	width:255px;
+	height: 150px;
+	border:1px solid #DDDDDD;
+	background-color: #FAFAFA;
+	}
+.wedding .h2_list{	
+	/*height: 30px;*/
+	font-size: 16px;
+	/*line-height: 30px;*/
+	margin: 10px 0 0 5px;   
+	padding:0 20px ;
+	}
+.wedding .wedding_list {
+	position: absolute;
+	width: 255px;
+	/*border:1px solid #999999;*/
+	display: table;
+	padding: 10px 0;
+	}
+.wedding .wedding_list ul{
+	display: table-row;
+	}	
+.wedding .wedding_list  li{
+	float: left;
+	width: 127px;
+	text-decoration: none;
+	display: table-cell;
+	margin: 8px 0;
+	}
+.wedding .wedding_list  li a:hover{
+	color: #CD426C;
+	}
+
+/*------左边下方列表category_list------------*/
+.category_list{
+	
+	width:255px;
+	position: relative;
+	background-color: white;
+	text-align:center;
+	/*border:1px solid #999999;*/
+
+	}
+.category_list .category_list_li{
+
+	margin: 10px 0 0 0;
+	font-size: 14px;
+	color: #666666;
+	border-bottom: 1px solid #e5e5e5 ;
+	padding-bottom: 10px;
+	
+	}
+/*.category_list .category_list_li .To_subdivide_ul{
+	width: 127px;
+	float: left;
+	text-align: center;
+	display: none;
+	
+	}*/
+/*细分 小图组成的衣领这些分类*/
+.To_subdivide {
+	display:block;
+	}
+.To_subdivide > li{
+	float:left;
+	width:85px;
+	margin-top:10px;
+	
+	}
+
+/*----右边上方列表right_list------*/
+.right_list{
+	/*border:1px solid black;*/
+	float:right;
+	width:940px;
+	}
+.right_top_list{
+	position: relative;  
+	height: 138px;
+	border:1px solid #DDDDDD;
+	/*background-color: #FAFAFA;*/
+	padding: 6px 0;
+}
+.right_top_list dl {
+	height: 28px;
+	line-height: 28px;
+	float: left;
+}
+.right_top_list dl dt{
+	width: 74px;
+	padding: 0 2px;
+	float: left;
+	text-align: right;
+}
+
+.right_top_list dl dd{
+	width: 800px;
+	float: left;
+}
+.right_top_list dl dd a{
+	margin: 0 5px;
+}
+
+.right_top_list dl dd a:hover{
+	color: #CD426C;
+}
+/*--------右下方导航和衣服展示-----------------*/
+.cloth{
+	/*position: relative;*/
+	/*border:1px solid #999999;*/
+	/*height: 700px;*/
+}
+/*-------------智能导航栏---------------*/
+#Intelligent_nav_list{
+	position: relative;
+	top:0px;
+	z-index: 999;
+}
+.Intelligent_nav{
+	margin-top: 5px;
+	height: 35px;
+	width: 940px;
+	background-color: #F0F0F0;
+	opacity: 0.8;
+}
+.Intelligent_nav a{
+	margin-top: 5px;
+	height: 25px;
+	line-height: 25px;
+	background-color: black;
+	color: white;
+	padding: 0px 20px;
+	display: inline-block;
+}
+.Intelligent_nav .red_cell{
+	background-color: #E41688;
+	margin-left: 30px;
+}
+.Intelligent_nav .red_cell:hover{
+	color: white;
+}
+.Intelligent_nav a:hover{
+	color: white;
+}
+/*--------------衣服分类------------------*/
+
+.cloth_classification{
+	/*border: 1px solid #999999;*/
+}
+ul.Show_Cloth li{
+	display: inline-block;
+	position: relative;
+	width: 227px;
+	float: left;
+	margin: 0 8px 10px 0;
+}
+ul.Show_Cloth li.last{
+	margin: 0 0 10px 0;
+}
+ul.Show_Cloth li p.picture a{
+	float: left;
+	border: solid 1px #DDDDDD;
+	padding: 2px;
+}
+ul.Show_Cloth li p.picture a:hover{
+	border: solid 1px #E50083;
+}
+ul.Show_Cloth li p.picture img{
+	width: 226px;
+	height: 340px;
+}
+ul.Show_Cloth li p.name{
+	text-align: right;
+	width: 228px;
+	height: 23px;
+	overflow: hidden;
+	line-height: 20px;
+	padding-top: 5px;
+}
+ul.Show_Cloth li p.name a:hover{
+	color:  #E50083;
+}
+ul.Show_Cloth li p.price{
+	text-align: right;
+	line-height: 20px;
+	
+}
+ul.Show_Cloth li p.price .money{
+	font-size: 14px;
+	color: #e4393c;
+	font-family: verdana;
+	font-weight: bold;
+}
+/*-----page------ 衣服下方翻页*/
+.page{
+	text-align: right;
+	padding: 10px 0;
+/*	height: 24px;*/
+	font-family: "simsun";
+}
+.page a{
+	border: 1px solid #DDDDDD;
+	padding: 5px;
+	color: #747474;
+	margin: 0 1px;
+	height: 24px;
+	
+}
+.page a:hover{
+	border: 1px solid #EC377A;
+	color: #EC377A;
+	
+}
+.page .span{
+	border: solid 1px #DDDDDD;
+	padding: 5px;
+	margin: 0 1px;
+	color: #747474;
+}
+.page .span:hover{
+	border: 1px solid #EC377A;
+	color: #EC377A;
+}
+.page .current{
+	border: 1px solid #EC377A;
+	background-color: #EC377A ;
+	padding: 5px;
+	margin: 0 1px;
+	height: 24px;
+	color: #FFFFFF;
+}
+.page .current:hover{
+	
+	color: #FFFFFF;
+}
+
+.page .disabled:hover{
+	border: solid 1px #DDDDDD;
+	padding: 5px;
+	margin: 0 1px;
+	color: #747474;
+}

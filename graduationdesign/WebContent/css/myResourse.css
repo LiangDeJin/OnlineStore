@@ -1,0 +1,155 @@
+@charset "utf-8";
+.person_magesage{
+	position: relative;
+	width: 100%;
+	border-top: 2px solid #CCCCCC;
+	border-bottom: 2px solid #CCCCCC;
+}
+.person_magesage .massage{
+	width: 95%;
+	margin-top:10px;
+}
+.changemenu{
+	position: absolute;
+	text-align: center;
+	background-color: #CD426C;
+	color: white;
+	margin: 10px 10px 0 10px;
+	width: 90px;
+	padding:8px;
+	font-family: "微软雅黑";
+}
+.commit{
+	margin-top: 15px;
+	text-align: center;
+	background-color: #CD426C;
+	color: white;
+	float: left;
+	width: 90px;
+	padding:10px;
+}
+.commit:hover{
+	color: white;
+}
+.changepsw{
+	position: absolute;
+	right: 0;
+	margin-top:10px;
+	width: 55%;
+	height: 500px;
+}
+.margin_left{
+	margin-left: 100px;
+}
+/*---------------------------地址管理*/
+.address_managment{
+	width: 100%;
+	height:395px;
+}
+.logistic{
+	border: 1px solid #E5E4E4;
+	width: 99.8%;
+	font-size: 14px;
+	color: #656565;
+	text-align: center;
+}
+.logistic .address_title{
+	position: relative;
+	width: 100%;
+	background-color: #E5E4E4;
+	height: 50px;
+}
+.address_name{
+	position: absolute;
+	width: 10%;
+	height: 30px;
+	top: 15px;
+	/*border: 1px solid #000000;*/
+}
+.address_phone{
+	position: absolute;
+	left: 10%;
+	top: 15px;
+	width: 20%;
+	height: 30px;
+	/*border: 1px solid #000000;*/
+}
+.address_Detail{
+	/*border: 1px solid #000000;*/
+	width:55%;
+	left: 30%;
+	top: 15px;
+	position: absolute;
+	height: 30px;
+}
+.caozuo{
+	/*border: 1px solid #000000;*/
+	width: 15%;
+	left:85%;
+	top: 15px;
+	position: absolute;
+	height: 30px;
+}
+.caozuo span{
+	margin: 0 10px;
+}
+.logistic .address_normal{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 50px;
+}
+.fixed{
+	position: relative;
+}
+.addressone{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	text-align: center;
+	color: white;
+	background-color: #CD426C;
+	padding:8px;	
+}
+.addressone:hover{
+	color: white;
+}
+/*------------增加收货地址--*/
+.add_address{
+	z-index: 11;
+	padding: 5px;
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 750px;
+	background-color: white;
+	position: absolute;
+	top: 30%;
+	left: 10%;	
+	display: none;
+}
+.commit_add{
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px;
+	background-color: #CD426C;
+	margin:0 10px;
+	color: white;
+	float: left;
+	width: 100px;
+}
+.commit_add:hover{
+	color: white;
+}
+.comeback{
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px;
+	background-color: #656565;
+	margin-right: 20px;
+	color: white;
+	float: left;
+	width: 100px;
+}
+.comeback:hover{
+	color: white;
+}
